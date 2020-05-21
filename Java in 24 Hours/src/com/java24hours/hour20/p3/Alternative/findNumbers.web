@@ -1,0 +1,5 @@
+*$!ak*(&314SDA319 saji 131DSL421 @
+
+There are 4 IDs in the line above:  314, 319, 131, and 421.  
+My task is to find the 4 IDs, but also I cannot continue to 
+read after I read the @ character (= integer 64).  

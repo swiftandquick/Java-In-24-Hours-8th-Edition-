@@ -1,0 +1,11 @@
+name: SiameseCat
+
+author: Wild Cat
+
+main: org.cadenhead.minecraft.SiameseCat
+
+commands:
+	siamesecat:
+		description: Spawn a Siamese cat.
+		
+version: 1.0
