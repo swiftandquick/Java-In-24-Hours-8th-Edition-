@@ -62,6 +62,7 @@ public class PhoBowl extends JFrame implements ActionListener, ItemListener {
 		FlowLayout bottomLayout = new FlowLayout(FlowLayout.CENTER, 10, 10);
 		bottomRow.setLayout(bottomLayout);
 		order.addActionListener(this);
+		order.setEnabled(false);
 		bottomRow.add(order);
 		add(bottomRow);
 		
@@ -72,7 +73,8 @@ public class PhoBowl extends JFrame implements ActionListener, ItemListener {
 	 * based on item selected, what I did shouldn't be the optimal way.  */
 	public void actionPerformed(ActionEvent event) {
 		
-		/** It should get the button's command in String.  */
+		/** It should get the button's command in String.  Since command 
+		 * can change, I am getting that rather than source.  */
 		String cmd = event.getActionCommand();
 		
 		String[] words = whatSize.getText().split(" ");
@@ -112,21 +114,27 @@ public class PhoBowl extends JFrame implements ActionListener, ItemListener {
 		/** Check if each option is selected, I supposed there is a better way.  */
 		if (tinySize.isSelected()) {
 			whatSize.setText("Are you going to get tiny size bowl of pho?  ");
+			order.setEnabled(true);
 		}
 		else if (smallSize.isSelected()) {
 			whatSize.setText("Are you going to get small size bowl of pho?  ");
+			order.setEnabled(true);
 		}
 		else if (mediumSize.isSelected()) {
 			whatSize.setText("Are you going to get medium size bowl of pho?  ");
+			order.setEnabled(true);
 		}
 		else if (largeSize.isSelected()) {
 			whatSize.setText("Are you going to get large size bowl of pho?  ");
+			order.setEnabled(true);
 		}
 		else if (superSize.isSelected()) {
 			whatSize.setText("Are you going to get super size bowl of pho?  ");
+			order.setEnabled(true);
 		}
 		else { // If possible size is selected.  
 			whatSize.setText("Are you going to get impossible size bowl of pho?  ");
+			order.setEnabled(true);
 		} 
 
 	}

@@ -50,7 +50,8 @@ public class ImageDownloader {
 		 * The purpose is to replace the temp via rename() method.  */
 		File perm = new File("src/com/java24hours/hour21/p3/lighthouse.jpg");
 		
-		/** Convert temp from Path to File, then let it be replaced by perm.  I don't have to 
+		/** Note:  This may not be the case.  
+		 * Convert temp from Path to File, then let it be replaced by perm.  I don't have to 
 		 * create the perm file using createNewFile(), I can just rename the Object name temp 
 		 * to perm, since temp is already created using the createTempFile() method.  Doing this 
 		 * will make the temporary file permanent.  */
